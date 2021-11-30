@@ -1,0 +1,2 @@
+module BettingsHelper
+end

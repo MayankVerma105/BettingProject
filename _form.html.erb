@@ -1,0 +1,23 @@
+
+
+<%= form_with model: @betting do |form| %>
+  <div>
+    <%= form.label :match %><br>
+    <%= form.text_field :match %>
+    <% @betting.errors.full_messages_for(:match).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :team %><br>
+    <%= form.text_area :team %><br>
+    <% @betting.errors.full_messages_for(:team).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

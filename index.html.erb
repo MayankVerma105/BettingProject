@@ -1,0 +1,9 @@
+<h1>Index Matchs</h1>
+<ul>
+  <% @matchs.each do |match| %>
+    <li>
+      <%= link_to match.match, match_home_path(match) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New Betting", new_match_path %>
